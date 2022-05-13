@@ -1,0 +1,99 @@
+@import "./CSS/reset";
+
+.calculator {
+  width: 390px;
+  background-color: $black;
+  border-radius: 30px;
+
+  &__display {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 80px;
+  }
+
+  &__display-input {
+    background-color: transparent;
+    outline: transparent;
+    border: 0;
+    color: $white;
+    margin-bottom: 80px;
+    font-size: calculator-rem(48);
+    text-align: right;
+    margin-top: 53px;
+    margin-right: 19px;
+  }
+
+  &__display-result {
+    color: $light-grey;
+    font-size: calculator-rem(48);
+    margin-right: 19px;
+    align-items: flex-end;
+  }
+
+  &__callback {
+    margin: 0 19px 0;
+    margin-bottom: 25px;
+    height: 24px;
+    height: 24px; 
+  }
+
+  .straight-line {
+    width: 352px;
+    height: 1px;
+    background-color: $background;
+    margin-bottom: 25px;
+    border: transparent;
+  }
+
+  &__buttons {
+    &--button {
+      background-color: $grey;
+      color: $white;
+      width: 73px;
+      height: 75px;
+      font-size: calculator-rem(36);
+      border: 0;
+      border-radius: 9px;
+
+      &:hover {
+        background-color: lighten($grey, 20%);
+      }
+    }
+
+    &--button-red-background {
+      background-color: $red;
+      color: $grey;
+
+      &:hover {
+        background: lighten($red, 10%);
+      }
+    }
+
+    &--button-green-color {
+      color: $green;
+      font-size: calculator-rem(20);
+    }
+
+    &--button-grey-color {
+      color: $grey;
+    }
+
+    &--button-green-background {
+      background-color: $green;
+    }
+  }    
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 20px;
+
+    &--last-column {
+      padding-bottom: 42px;
+    }
+  }
+  
+}
